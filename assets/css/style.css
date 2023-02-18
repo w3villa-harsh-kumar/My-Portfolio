@@ -136,6 +136,7 @@ header {
   right: 0;
   z-index: 100;
   padding: 50px;
+  z-index: 1000;
 }
 
 header .container {
@@ -464,6 +465,7 @@ Skills Section
   font-size: 1.2rem;
 }
 .skills-box {
+  position: relative;
   padding: 1rem;
   color: #000;
   cursor: pointer;
@@ -510,6 +512,56 @@ Skills Section
   color: #333;
   margin-top: 0.5rem;
 }
+
+.progress-bar {
+  border-radius: 50%;
+  transform: translate(50%, 50%);
+  width: 100px;
+  height: 100px;
+  display: flex;
+  margin: 20px;
+  z-index: 100;
+  position: absolute;
+  bottom: 30%;
+  right: 20%;
+}
+.progress-bar .overlay {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    background: #fff;
+    text-align: center;
+    padding-top: 30%;
+}
+.progress-60 {
+  background-image: -webkit-linear-gradient(left, #81bd65 50%, transparent 50%), -webkit-linear-gradient(36deg, #81bd65 50%, #ddd 50%);
+  background-image: linear-gradient(90deg, #81bd65 50%, transparent 50%), linear-gradient(54deg, #81bd65 50%, #ddd 50%);
+}
+.progress-61 {
+  background-image: -webkit-linear-gradient(left, #f1c748 50%, transparent 50%), -webkit-linear-gradient(36deg, #f1c748 50%, #ddd 50%);
+  background-image: linear-gradient(90deg, #f1c748 50%, transparent 50%), linear-gradient(54deg, #f1c748 50%, #ddd 50%);
+}
+
+.progress-70 {
+    background-image: -webkit-linear-gradient(left, #028cd5 50%, transparent 50%), -webkit-linear-gradient(72deg, #028cd5 50%, #ddd 50%);
+    background-image: linear-gradient(90deg, #028cd5 50%, transparent 50%), linear-gradient(18deg, #028cd5 50%, #ddd 50%);
+  }
+
+.progress-71 {
+    background-image: -webkit-linear-gradient(left, rgba(11, 219, 199, 1) 50%, transparent 50%), -webkit-linear-gradient(72deg, rgba(11, 219, 199, 1) 50%, #ddd 50%);
+    background-image: linear-gradient(90deg, rgba(11, 219, 199, 1) 50%, transparent 50%), linear-gradient(18deg, rgba(11, 219, 199, 1) 50%, #ddd 50%);
+  }
+
+  .progress-80 {
+    background-image: -webkit-linear-gradient(left, rgba(255,252,0,1) 50%, transparent 50%), -webkit-linear-gradient(108deg, rgba(255,252,0,1) 50%, #ddd 50%);
+    background-image: linear-gradient(90deg, rgba(255,252,0,1) 50%, transparent 50%), linear-gradient(-18deg, rgba(255,252,0,1) 50%, #ddd 50%);
+  }
+
+.progress-90 {
+    background-image: -webkit-linear-gradient(left, #f7a41c 50%, transparent 50%), -webkit-linear-gradient(144deg, #f7a41c 50%, #ddd 50%);
+    background-image: linear-gradient(90deg, #f7a41c 50%, transparent 50%), linear-gradient(-54deg, #f7a41c 50%, #ddd 50%);
+  }
 
 @media screen and (max-width: 1300px) {
   .skills {
@@ -602,13 +654,13 @@ Project Section
 }
 
 @media screen and (max-width: 1680px) {
-    .project .project-container .project-card {
-        width: 340px;
-      }
-      
-      .project .project-container .project-card .card-image {
-        width: 340px;
-      }
+  .project .project-container .project-card {
+    width: 340px;
+  }
+
+  .project .project-container .project-card .card-image {
+    width: 340px;
+  }
 }
 
 @media screen and (max-width: 1300px) {
@@ -623,10 +675,10 @@ Project Section
   }
 
   .project .project-container .project-card {
-      margin-bottom: 26px;
+    margin-bottom: 26px;
     width: 440px;
   }
-  
+
   .project .project-container .project-card .card-image {
     width: 440px;
   }
@@ -645,12 +697,12 @@ Project Section
 
   .project .project-container .project-card {
     margin-bottom: 26px;
-  width: 340px;
-}
+    width: 340px;
+  }
 
-.project .project-container .project-card .card-image {
-  width: 340px;
-}
+  .project .project-container .project-card .card-image {
+    width: 340px;
+  }
 }
 
 @media screen and (max-width: 365px) {
@@ -670,29 +722,28 @@ Project Section
   Footer section
   **********************
   */
-  footer {
-    background-color: var(--secondary-background-color);
-    text-align: center;
-  }
+footer {
+  background-color: var(--secondary-background-color);
+  text-align: center;
+}
 
-  footer .main__heading{
-    font-size: 50px;
-  }
+footer .main__heading {
+  font-size: 50px;
+}
 
-  footer .container .parent-container .contact-links ul{
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    align-items: center;
-  }
+footer .container .parent-container .contact-links ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
 
-  footer .container .parent-container .contact-links ul li{
-    margin-right: 36px;
-  }
+footer .container .parent-container .contact-links ul li {
+  margin-right: 36px;
+}
 
-  footer .container .parent-container .contact-links ul li a{
-    text-decoration: none;
-    color: black;
-    font-size: 30px;
-  }
-
+footer .container .parent-container .contact-links ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+}
