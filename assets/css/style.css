@@ -601,6 +601,16 @@ Project Section
   color: white;
 }
 
+@media screen and (max-width: 1680px) {
+    .project .project-container .project-card {
+        width: 340px;
+      }
+      
+      .project .project-container .project-card .card-image {
+        width: 340px;
+      }
+}
+
 @media screen and (max-width: 1300px) {
   .project {
     text-align: center;
@@ -613,7 +623,12 @@ Project Section
   }
 
   .project .project-container .project-card {
-    margin-bottom: 26px;
+      margin-bottom: 26px;
+    width: 440px;
+  }
+  
+  .project .project-container .project-card .card-image {
+    width: 440px;
   }
 }
 
@@ -627,6 +642,15 @@ Project Section
   .project .upper .content-parent .main__text {
     width: 100%;
   }
+
+  .project .project-container .project-card {
+    margin-bottom: 26px;
+  width: 340px;
+}
+
+.project .project-container .project-card .card-image {
+  width: 340px;
+}
 }
 
 @media screen and (max-width: 365px) {
