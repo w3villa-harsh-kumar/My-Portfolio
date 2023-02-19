@@ -747,11 +747,13 @@ Project Section
 
 @media screen and (max-width: 918px) {
   .project .project-container {
-    grid-template-columns: repeat(1, 2fr);
-    padding: 2rem 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
   }
 }
-
+/* 
 @media screen and (max-width: 464px) {
   .project .upper .content-parent .main__text {
     width: 100%;
@@ -777,7 +779,7 @@ Project Section
     overflow: hidden;
     height: 200px;
   }
-}
+} */
 
 /* 
   **********************
