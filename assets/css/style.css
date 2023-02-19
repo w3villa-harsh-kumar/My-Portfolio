@@ -666,8 +666,12 @@ Project Section
 }
 
 .project .project-container {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-gap: 1rem;
 }
 
 .project .project-container .project-card {
@@ -717,42 +721,21 @@ Project Section
 .project .project-container .project-card .links .deployed-link,
 .project .project-container .project-card .links .github-link {
   margin-left: 12px;
-}
-
-.project .project-container .project-card .links .deployed-link a,
-.project .project-container .project-card .links .github-link a {
   text-decoration: none;
   color: white;
 }
 
-@media screen and (max-width: 1680px) {
-  .project .project-container .project-card {
-    width: 340px;
-  }
 
-  .project .project-container .project-card .card-image {
-    width: 340px;
+@media screen and (max-width: 1400px) {
+  .project .project-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem 50px;
   }
 }
 
 @media screen and (max-width: 1300px) {
   .project {
     text-align: center;
-  }
-  .project .project-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .project .project-container .project-card {
-    margin-bottom: 26px;
-    width: 440px;
-  }
-
-  .project .project-container .project-card .card-image {
-    width: 440px;
   }
 }
 
@@ -762,7 +745,14 @@ Project Section
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 918px) {
+  .project .project-container {
+    grid-template-columns: repeat(1, 2fr);
+    padding: 2rem 50px;
+  }
+}
+
+@media screen and (max-width: 464px) {
   .project .upper .content-parent .main__text {
     width: 100%;
   }
