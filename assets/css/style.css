@@ -136,7 +136,7 @@ header {
   right: 0;
   z-index: 100;
   padding: 50px;
-  z-index: 1000;
+  z-index: 200;
 }
 
 header .container {
@@ -157,6 +157,7 @@ header .logo a {
   background: -webkit-linear-gradient(#0bdbc7, #0596b5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
 }
 
 header .hamburger {
@@ -221,9 +222,6 @@ header .navigation .navbar .resume {
   );
   padding: 10px 26px;
   border-radius: 30px;
-}
-
-header .resume a {
   text-decoration: none;
   color: white;
 }
@@ -305,6 +303,7 @@ Hero Section
   margin: auto;
   overflow: hidden;
   margin-bottom: 20px;
+  box-shadow: 0px 0px 50px -15px rgb(11 219 199);
 }
 
 .hero .content-parent .circle img {
@@ -313,8 +312,34 @@ Hero Section
   object-fit: cover;
 }
 
-.hero .content-parent .my-btn a {
+.hero .content-parent .my-btn {
   text-decoration: none;
+  color: white;
+}
+
+.hero .down-arrow {
+  font-size: 30px;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: bounce 0.6s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+  animation-iteration-count: infinite;
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  from {
+      transform: translate3d(0, 0, 0);
+  }
+  to {
+      transform: translate3d(0, 10px, 0);
+  }
+}
+
+.hero .down-arrow a{
   color: white;
 }
 
@@ -334,7 +359,7 @@ Hero Section
 
 /* 
 **********************
-Hero Section
+Sidebar Section
 **********************
 */
 
@@ -353,7 +378,7 @@ Hero Section
   left: 0;
   top: 0;
   background-color: #3d3c3c;
-  z-index: 199;
+  z-index: 300;
   transition: all 0.5s ease-in-out;
   transform: translateX(-100%);
 }
@@ -389,6 +414,7 @@ Hero Section
   bottom: 0;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-transform: uppercase;
 }
 
 .sidebar .parent-container .logo a {
@@ -402,6 +428,20 @@ Hero Section
   .sidebar {
     display: none;
   }
+}
+
+@media screen and (max-width: 614px) {
+  
+.sidebar .parent-container .logo a {
+  font-size: 20px;
+}
+}
+
+@media screen and (max-width: 406px) {
+  
+.sidebar .parent-container .logo a {
+  font-size: 15px;
+}
 }
 
 /* 
@@ -461,7 +501,6 @@ Skills Section
   align-items: center;
   text-align: center;
   grid-gap: 1rem;
-  padding: 1rem 80px;
   font-size: 1.2rem;
 }
 .skills-box {
@@ -469,6 +508,11 @@ Skills Section
   padding: 1rem;
   color: #000;
   cursor: pointer;
+}
+
+.skills-box:hover{
+  transition: all .5s;
+  transform: scale(1.1);
 }
 
 .skills-title {
@@ -526,42 +570,70 @@ Skills Section
   right: 20%;
 }
 .progress-bar .overlay {
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    margin: auto;
-    background: #fff;
-    text-align: center;
-    padding-top: 30%;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  background: #fff;
+  text-align: center;
+  padding-top: 30%;
 }
 .progress-60 {
-  background-image: -webkit-linear-gradient(left, #81bd65 50%, transparent 50%), -webkit-linear-gradient(36deg, #81bd65 50%, #ddd 50%);
-  background-image: linear-gradient(90deg, #81bd65 50%, transparent 50%), linear-gradient(54deg, #81bd65 50%, #ddd 50%);
+  background-image: -webkit-linear-gradient(left, #81bd65 50%, transparent 50%),
+    -webkit-linear-gradient(36deg, #81bd65 50%, #ddd 50%);
+  background-image: linear-gradient(90deg, #81bd65 50%, transparent 50%),
+    linear-gradient(54deg, #81bd65 50%, #ddd 50%);
 }
 .progress-61 {
-  background-image: -webkit-linear-gradient(left, #f1c748 50%, transparent 50%), -webkit-linear-gradient(36deg, #f1c748 50%, #ddd 50%);
-  background-image: linear-gradient(90deg, #f1c748 50%, transparent 50%), linear-gradient(54deg, #f1c748 50%, #ddd 50%);
+  background-image: -webkit-linear-gradient(left, #f1c748 50%, transparent 50%),
+    -webkit-linear-gradient(36deg, #f1c748 50%, #ddd 50%);
+  background-image: linear-gradient(90deg, #f1c748 50%, transparent 50%),
+    linear-gradient(54deg, #f1c748 50%, #ddd 50%);
 }
 
 .progress-70 {
-    background-image: -webkit-linear-gradient(left, #028cd5 50%, transparent 50%), -webkit-linear-gradient(72deg, #028cd5 50%, #ddd 50%);
-    background-image: linear-gradient(90deg, #028cd5 50%, transparent 50%), linear-gradient(18deg, #028cd5 50%, #ddd 50%);
-  }
+  background-image: -webkit-linear-gradient(left, #028cd5 50%, transparent 50%),
+    -webkit-linear-gradient(72deg, #028cd5 50%, #ddd 50%);
+  background-image: linear-gradient(90deg, #028cd5 50%, transparent 50%),
+    linear-gradient(18deg, #028cd5 50%, #ddd 50%);
+}
 
 .progress-71 {
-    background-image: -webkit-linear-gradient(left, rgba(11, 219, 199, 1) 50%, transparent 50%), -webkit-linear-gradient(72deg, rgba(11, 219, 199, 1) 50%, #ddd 50%);
-    background-image: linear-gradient(90deg, rgba(11, 219, 199, 1) 50%, transparent 50%), linear-gradient(18deg, rgba(11, 219, 199, 1) 50%, #ddd 50%);
-  }
+  background-image: -webkit-linear-gradient(
+      left,
+      rgba(11, 219, 199, 1) 50%,
+      transparent 50%
+    ),
+    -webkit-linear-gradient(72deg, rgba(11, 219, 199, 1) 50%, #ddd 50%);
+  background-image: linear-gradient(
+      90deg,
+      rgba(11, 219, 199, 1) 50%,
+      transparent 50%
+    ),
+    linear-gradient(18deg, rgba(11, 219, 199, 1) 50%, #ddd 50%);
+}
 
-  .progress-80 {
-    background-image: -webkit-linear-gradient(left, rgba(255,252,0,1) 50%, transparent 50%), -webkit-linear-gradient(108deg, rgba(255,252,0,1) 50%, #ddd 50%);
-    background-image: linear-gradient(90deg, rgba(255,252,0,1) 50%, transparent 50%), linear-gradient(-18deg, rgba(255,252,0,1) 50%, #ddd 50%);
-  }
+.progress-80 {
+  background-image: -webkit-linear-gradient(
+      left,
+      rgba(255, 252, 0, 1) 50%,
+      transparent 50%
+    ),
+    -webkit-linear-gradient(108deg, rgba(255, 252, 0, 1) 50%, #ddd 50%);
+  background-image: linear-gradient(
+      90deg,
+      rgba(255, 252, 0, 1) 50%,
+      transparent 50%
+    ),
+    linear-gradient(-18deg, rgba(255, 252, 0, 1) 50%, #ddd 50%);
+}
 
 .progress-90 {
-    background-image: -webkit-linear-gradient(left, #f7a41c 50%, transparent 50%), -webkit-linear-gradient(144deg, #f7a41c 50%, #ddd 50%);
-    background-image: linear-gradient(90deg, #f7a41c 50%, transparent 50%), linear-gradient(-54deg, #f7a41c 50%, #ddd 50%);
-  }
+  background-image: -webkit-linear-gradient(left, #f7a41c 50%, transparent 50%),
+    -webkit-linear-gradient(144deg, #f7a41c 50%, #ddd 50%);
+  background-image: linear-gradient(90deg, #f7a41c 50%, transparent 50%),
+    linear-gradient(-54deg, #f7a41c 50%, #ddd 50%);
+}
 
 @media screen and (max-width: 1300px) {
   .skills {
