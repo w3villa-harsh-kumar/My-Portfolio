@@ -152,7 +152,7 @@ header {
   left: 0;
   right: 0;
   z-index: 100;
-  padding: 50px;
+  padding: 40px;
   z-index: 200;
 }
 
@@ -422,7 +422,18 @@ Sidebar Section
 }
 
 .sidebar .parent-container .list-container ul li {
-  padding-top: 15px;
+  padding-top: 30px;
+}
+
+.sidebar .parent-container .list-container ul li:hover {
+  transition: all .5s;
+  transform: scale(1.1);
+  color: #0bdbc7;
+}
+
+.sidebar .parent-container .list-container ul li:hover a,
+.sidebar .parent-container .list-container ul li:hover a i{
+  color: #0bdbc7;
 }
 .sidebar .parent-container .list-container ul li a {
   color: white;
@@ -432,7 +443,7 @@ Sidebar Section
 }
 .sidebar .parent-container .list-container ul li a i {
   color: white;
-  padding-right: 5px;
+  padding-right: 15px;
 }
 
 .sidebar .parent-container .logo {
@@ -447,7 +458,10 @@ Sidebar Section
   text-decoration: none;
   font-size: 30px;
   font-weight: bold;
-  color: #f2f1f1;
+  background: -webkit-linear-gradient(#0bdbc7, #0596b5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: 1050px) {
