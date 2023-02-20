@@ -840,3 +840,9 @@ footer .container .parent-container .contact-links ul li a {
   color: black;
   font-size: 30px;
 }
+
+@media screen and (max-width:920px) {
+  footer .main__heading {
+    font-size: 30px;
+  }
+}
