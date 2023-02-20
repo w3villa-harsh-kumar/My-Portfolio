@@ -71,7 +71,7 @@ Common Styles
 }
 
 .my-btn:hover {
-  opacity: .8;
+  opacity: .9 ;
   transition: all .5s;
   transform: scale(1.03);
 }
