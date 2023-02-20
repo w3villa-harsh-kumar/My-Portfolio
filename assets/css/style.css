@@ -1,3 +1,4 @@
+/* Font Import */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
 /* 
@@ -70,14 +71,9 @@ Common Styles
 }
 
 .my-btn:hover {
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(11, 219, 199, 1) 0%,
-    rgba(5, 150, 181, 1) 100%,
-    rgba(0, 212, 255, 1) 100%
-  );
+  opacity: .8;
+  transition: all .5s;
+  transform: scale(1.03);
 }
 
 .p-tb {
@@ -116,15 +112,36 @@ Common Styles
   color: rgba(11, 219, 199, 1);
 }
 
+@media screen and (max-width: 1200px) {
+  .p-tb {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .ps-tb {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .ms-lr {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .ps-t {
+    padding-top: 10px;
+  }
+
+  .ps-b {
+    padding-bottom: 10px;
+  }
+}
+
 /* 
 **********************
 Header
 **********************
 */
-
-/* header{
-  padding: 30px;
-} */
 
 header {
   display: flex;
@@ -226,6 +243,10 @@ header .navigation .navbar .resume {
   color: white;
 }
 
+header .navigation .navbar .resume:hover{
+  opacity: .9;
+}
+
 @media screen and (max-width: 1050px) {
   header .container {
     padding-top: 23px;
@@ -271,9 +292,14 @@ Hero Section
 */
 
 .hero {
-  background-image: url(https://images.unsplash.com/photo-1468436139062-f60a71c5c892?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1270&q=80);
-  background-size: cover;
-  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero img.bg-img {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -332,14 +358,14 @@ Hero Section
 
 @keyframes bounce {
   from {
-      transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
   to {
-      transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
   }
 }
 
-.hero .down-arrow a{
+.hero .down-arrow a {
   color: white;
 }
 
@@ -431,17 +457,15 @@ Sidebar Section
 }
 
 @media screen and (max-width: 614px) {
-  
-.sidebar .parent-container .logo a {
-  font-size: 20px;
-}
+  .sidebar .parent-container .logo a {
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 406px) {
-  
-.sidebar .parent-container .logo a {
-  font-size: 15px;
-}
+  .sidebar .parent-container .logo a {
+    font-size: 15px;
+  }
 }
 
 /* 
@@ -485,6 +509,9 @@ About Section
 Skills Section
 **********************
 */
+.skills{
+  background-color: var(--secondary-background-color);
+}
 
 .skills .main__heading {
   font-size: 50px;
@@ -510,8 +537,8 @@ Skills Section
   cursor: pointer;
 }
 
-.skills-box:hover{
-  transition: all .5s;
+.skills-box:hover {
+  transition: all 0.5s;
   transform: scale(1.1);
 }
 
@@ -671,11 +698,11 @@ Project Section
   justify-content: center;
   align-items: center;
   text-align: center;
-  grid-gap: 1rem;
+  gap: 3.5rem;
 }
 
 .project .project-container .project-card {
-  box-shadow: 0px 0px 52px -16px;
+  box-shadow: 3px 3px 17px #eee;
   border-radius: 15px;
   width: 440px;
   overflow: hidden;
@@ -705,6 +732,7 @@ Project Section
   font-weight: 700;
   margin-bottom: 10px;
   font-size: 40px;
+  color: #000;
 }
 
 .project .project-container .project-card .card-text .bio {
@@ -726,6 +754,11 @@ Project Section
   font-weight: bold;
 }
 
+@media screen and (max-width: 1470px) {
+  .project .project-container {
+    gap: 2rem;
+  }
+}
 
 @media screen and (max-width: 1400px) {
   .project .project-container {
@@ -775,6 +808,17 @@ footer .container .parent-container .contact-links ul {
   justify-content: center;
   align-items: center;
   gap: 42px;
+}
+
+footer .container .parent-container .contact-links ul li:hover{
+  transition: all .3s;
+  transform: scale(1.2);
+}
+
+footer .container .parent-container .contact-links ul li:hover a{
+  color: #0eb5a4;
+  transition: all .5s;
+  transform: scale(1.2);
 }
 
 footer .container .parent-container .contact-links ul li a {
